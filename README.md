@@ -12,6 +12,36 @@
 Example instruction to backtest tutorial round (assuming proper folder setup):
 ```prosperity4bt tutorial/trader.py 0 --data data```
 
+Example folder setup for above command:
+
+```bash
+.
+├── backtests                             # where backtest results will go
+├── data
+│   ├── backtests
+│   ├── round0                            # must be of form "round{which round}"
+│   │   ├── prices_round_0_day_-1.csv
+│   │   ├── prices_round_0_day_-2.csv
+│   │   ├── trades_round_0_day_-1.csv
+│   │   └── trades_round_0_day_-2.csv
+│   └── TUTORIAL_ROUND_1.zip
+├── README.md
+└── tutorial
+    ├── data
+    │   ├── backtests
+    │   │   ├── 2026-03-27_21-45-13.log
+    │   │   └── 2026-03-27_21-45-25.log
+    │   ├── prices_round_0_day_-1.csv
+    │   ├── prices_round_0_day_-2.csv
+    │   ├── trades_round_0_day_-1.csv
+    │   ├── trades_round_0_day_-2.csv
+    │   └── TUTORIAL_ROUND_1.zip
+    ├── datamodel.py
+    ├── explore.ipynb
+    ├── mid_price_tracker.py
+    ├── trader.py
+```
+
 Some more usage examples:
 ```sh
 # Backtest on all days from round 1
